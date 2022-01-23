@@ -9,6 +9,7 @@ use App\Models\Category;
 use Illuminate\Support\Facades\DB;
 use Database\Factories\ProductFactory;
 use Faker;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
@@ -26,7 +27,7 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Admin',
                 'email' => 'admin@gmail.com',
                 'email_verified_at' => now(),
-                'password' => 'secret', // password
+                'password' => Hash::make('secret'), // password
                 'address' => 'Budapest',
                 'phone_number' => '00000000',
                 'role' => 'Admin',

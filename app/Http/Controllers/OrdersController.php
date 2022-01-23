@@ -51,7 +51,7 @@ class OrdersController extends Controller
             ]);
         }
         $request->session()->forget('cart');
-        
+
         return  view('order_success');
     }
 
